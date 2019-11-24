@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="/css/Lumen.css" rel="stylesheet">
+    <link href="/css/Lux.css" rel="stylesheet">
     <link href="/css/footer.css" rel="stylesheet">
 </head>
     <div id='app'>

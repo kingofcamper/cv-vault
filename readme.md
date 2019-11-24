@@ -19,7 +19,7 @@ Clone the repository
 
 Switch to the project folder
 
-    cd cvtheque
+    cd Project
 
 Install all the dependencies using composer
 
@@ -34,6 +34,10 @@ Generate a new application key
     php artisan key:generate
 
 Run the database migrations (**Set the database connection in .env before migrating**)
+
+    php artisan storage:link
+
+link the storage folder with public folder
 
     php artisan migrate
 

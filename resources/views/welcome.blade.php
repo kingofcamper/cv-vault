@@ -4,20 +4,25 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Cv Managment</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
         <style>
-            html, body {
+            html, body{
+                background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("/assets/background.jpg");
+                background-size: cover;
+                background-attachment: fixed;
+                background-position: center center;
                 background-color: #fff;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+                position: relative;
             }
 
             .full-height {
@@ -58,42 +63,98 @@
                 text-transform: uppercase;
             }
 
-            .m-b-md {
-                margin-bottom: 30px;
+            .wrapper{
+                width: 1170px;
+                margin :auto;
+            }
+
+            .nav-area{
+                float:right;
+                list-style: none;
+                margin-top: 30px;
+            }
+
+            .nav-area li{
+                display:inline-block;
+            }
+
+            .nav-area li a{
+                color: #fff;
+                text-decoration: none;  
+                padding: 5px 20px;
+                font-family: poppins;
+                font-size: 14px;
+            }
+
+            .nav-area li a:hover{
+                color: #333;
+                background: #fff;
+            }
+
+            .logo img{
+                width: 100px;
+                float: left;
+                height: 50px;
+                padding: 22px 0 0 0;
+            }
+
+            .welcome-text{
+                position: absolute;
+                width: 600px;
+                height: 300px;
+                margin: 20% 30%;
+                text-align: center;
+            }
+
+            .welcome-text h1{
+                text-align: center;
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 60px;
+            }
+
+            .welcome-text a{
+                border: 1px solid #fff;
+                padding: 10px 15px;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 14px;
+                margin-top: 20px;
+                display:inline-block;
+                color: #fff;
+            }
+
+            .welcome-text a:hover{
+                background: #fff;
+                color: #333;
             }
         </style>
     </head>
+        
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
+        <div class="wrapper">
+            <div class="logo"><img src="/assets/logo.svg" alt=""></div>
+            <ul class="nav-area">
+                 @if (Route::has('login'))
+                
                     @auth
-                        <a href="{{ url('/cvs') }}">Mes CV</a>
+                        <li><a href="{{ url('/cvs') }}">Mes CV</a></li>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <li><a href="{{ route('login') }}">Login</a></li>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <li><a href="{{ route('register') }}">Register</a></li>
                         @endif
                     @endauth
-                </div>
+                
             @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
+            </ul>
         </div>
+        <div class="welcome-text">
+            <h1>We are creative</h1>
+            <a href="#">Contact Us</a>
+        </div>
+
+           
     </body>
 </html>

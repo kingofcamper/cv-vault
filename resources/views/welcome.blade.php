@@ -1,20 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@kingofcamper 
-1
-00kingofcamper/test-x
- Code Issues 0 Pull requests 0 Actions Projects 0 Wiki Security Insights Settings
-test-x/resources/views/welcome.blade.php
-@kingofcamper kingofcamper Test
-0a86e84 9 days ago
-99 lines (85 sloc)  2.82 KB
-  
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -73,9 +56,16 @@ test-x/resources/views/welcome.blade.php
         </style>
     </head>
     <body>
+
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
+
+        <div class="container">
+        <div class="wrapper">
+            <div class="logo"><img src="/assets/logo.svg" alt=""></div>
+            <ul class="nav-area">
+                 @if (Route::has('login'))
                     @auth
                         <a href="{{ url('/cvs') }}">Mes CV</a>
                     @else
@@ -104,17 +94,15 @@ test-x/resources/views/welcome.blade.php
                 </div>
             </div>
         </div>
+
+            </ul>
+        </div>
+        <div class="welcome-text">
+            <h1>We are creative</h1>
+            <a href="#">Contact Us</a>
+        </div>
+</div>
+           
+
     </body>
 </html>
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About

@@ -132,6 +132,7 @@
     </head>
         
     <body>
+        <div class="container">
         <div class="wrapper">
             <div class="logo"><img src="/assets/logo.svg" alt=""></div>
             <ul class="nav-area">
@@ -154,7 +155,7 @@
             <h1>We are creative</h1>
             <a href="#">Contact Us</a>
         </div>
-
+</div>
            
     </body>
 </html>

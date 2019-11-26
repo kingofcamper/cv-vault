@@ -56,16 +56,9 @@
         </style>
     </head>
     <body>
-
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
-
-        <div class="container">
-        <div class="wrapper">
-            <div class="logo"><img src="/assets/logo.svg" alt=""></div>
-            <ul class="nav-area">
-                 @if (Route::has('login'))
                     @auth
                         <a href="{{ url('/cvs') }}">Mes CV</a>
                     @else
@@ -94,15 +87,5 @@
                 </div>
             </div>
         </div>
-
-            </ul>
-        </div>
-        <div class="welcome-text">
-            <h1>We are creative</h1>
-            <a href="#">Contact Us</a>
-        </div>
-</div>
-           
-
     </body>
 </html>
